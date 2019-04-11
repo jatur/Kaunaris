@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Examples/Demo/01_Basic/Tinder.unity
     guid: e5ca50c5d3de14501b2d91e233fab821
+  - enabled: 1
+    path: Assets/Scenes/ChurchText.unity
+    guid: 5e35bcd8bacef724ca0255efc8d11d70
   m_configObjects: {}

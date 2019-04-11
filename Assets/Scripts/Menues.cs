@@ -35,5 +35,10 @@ public class Menues : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
-    
+
+    public void JumpToInfoOfChirch()
+    {
+        SceneManager.LoadScene(4);
+    }
+
 }
