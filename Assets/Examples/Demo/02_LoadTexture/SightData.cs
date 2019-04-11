@@ -13,6 +13,11 @@ namespace DefaultNamespace
         public String mapsURL;
         public int textureSceneID;
         public String link;
+        public bool isSight;
+        public bool isSport;
+        public bool isRestaurant;
+        public bool isBar;
+        public bool isSupermarket;
 
         public string Name
         {

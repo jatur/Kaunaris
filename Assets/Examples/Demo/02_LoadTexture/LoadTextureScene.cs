@@ -19,12 +19,21 @@ namespace SwipeableView
 
         public bool aractive = false;
         
+        public bool isSight;
+        public bool isSport;
+        public bool isRestaurant;
+        public bool isBar;
+        public bool isSupermarket;
 
         void Start()
         {
-            data = GetHardcodedData();
-            
             var component = GameObject.Find("DefaultSave").GetComponent<Save>();
+            isSight = component.IsSight;
+            isSport = component.IsSport;
+            isRestaurant = component.IsRestaurant;
+            isBar = component.IsBar;
+            isSupermarket = component.IsSupermarket;
+
             Debug.Log(component.Data.Count);
             Debug.Log(data.Count);
             if (component.Data.Count!=data.Count&&component.Data.Count>0)
@@ -33,6 +42,15 @@ namespace SwipeableView
                 data = component.Data;
 
             }
+            
+            data = GetHardcodedData()
+                .Where(x => x.isSight==component.IsSight)
+                .Where(x => x.isSport==component.IsBar)
+                .Where(x => x.isRestaurant==component.IsRestaurant)
+                .Where(x => x.isBar==component.IsBar)
+                .Where(x => x.isSupermarket==component.IsSupermarket)
+                .ToList();
+            
             swipeableView.UpdateData(data);
         }
 
@@ -57,6 +75,7 @@ namespace SwipeableView
             SceneManager.LoadScene(swipeableView.getData()[0].textureSceneID);
             aractive = true;
         }
+        
 
         public void OnClickNope()
         {
@@ -70,5 +89,6 @@ namespace SwipeableView
             data.Add(new SightData("Building","Info","Beast Info","2","/Ramyb%C4%97s+parkas,+Kaunas+44329",3,"www.google.de"));
             return data;
         }
+
     }
 }
