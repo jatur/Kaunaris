@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: a16e1fbde568d4858b705d26a68e7e14
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - swipeableView: {instanceID: 0}
+  - NewTexture: {fileID: 2800000, guid: 617c65d53f218eb40a17f8af457edc2b, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

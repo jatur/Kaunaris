@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menue.unity
+    guid: fad4fe807f2b119409c3c54af835acd5
+  - enabled: 1
+    path: Assets/Examples/Demo/02_LoadTexture/LoadTextureScene.unity
+    guid: 3486d413cb6094854b49c860c154be01
+  - enabled: 1
+    path: Assets/Scenes/Filter.unity
+    guid: e6cb3a0edf976da43a6a0745c1447108
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: b8c80021ad32ed04b977176c180639b3
+  - enabled: 0
+    path: Assets/Examples/Demo/01_Basic/Tinder.unity
+    guid: e5ca50c5d3de14501b2d91e233fab821
+  m_configObjects: {}
