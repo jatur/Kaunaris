@@ -11,11 +11,16 @@ public class Save : MonoBehaviour
 
     public List<SightData> data;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(GameObject.Find("DefaultSave"));   
+    }
+
     void Start()
     {
         fav = new List<SightData>();
         data = new List<SightData>();
-        DontDestroyOnLoad(GameObject.Find("DefaultSave"));
         SceneManager.LoadScene(0);
     }
 

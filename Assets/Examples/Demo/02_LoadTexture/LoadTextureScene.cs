@@ -15,17 +15,25 @@ namespace SwipeableView
         private UISwipeableViewLoadTexture swipeableView;
         
         private List<SightData> fav = new List<SightData>();
+        private List<SightData> data = new List<SightData>();
 
         public bool aractive = false;
         
 
         void Start()
         {
-            swipeableView.UpdateData(GetHardcodedData());
-            if (GameObject.Find("DefaultSave").GetComponent(Save))
+            data = GetHardcodedData();
+            
+            var component = GameObject.Find("DefaultSave").GetComponent<Save>();
+            Debug.Log(component.Data.Count);
+            Debug.Log(data.Count);
+            if (component.Data.Count!=data.Count&&component.Data.Count>0)
             {
-                
+                fav = component.Fav;
+                data = component.Data;
+
             }
+            swipeableView.UpdateData(data);
         }
 
         public void OnClickLike()
@@ -43,6 +51,9 @@ namespace SwipeableView
 
         public void onCLickAR()
         {
+            var component = GameObject.Find("DefaultSave").GetComponent<Save>();
+            component.Fav = swipeableView.getFav();
+            component.Data = swipeableView.getData();
             SceneManager.LoadScene(swipeableView.getData()[0].textureSceneID);
             aractive = true;
         }

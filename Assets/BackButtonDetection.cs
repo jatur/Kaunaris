@@ -18,7 +18,7 @@ public class BackButtonDetection : MonoBehaviour
         {
             // SceneManager.LoadScene(1);
             Debug.Log("Test");
-            SceneManager.UnloadSceneAsync(3);
+            SceneManager.LoadScene(1);
         }
     }
 }

@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 8}
-  m_MinSize: {x: 950, y: 548}
+  m_MinSize: {x: 950, y: 398}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,8 +42,8 @@ MonoBehaviour:
     y: 0
     width: 423
     height: 457
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 104, y: 124}
+  m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -69,10 +69,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 785, y: 498}
-  m_MaxSize: {x: 16010, y: 14048}
+  m_MinSize: {x: 787, y: 348}
+  m_MaxSize: {x: 16012, y: 8048}
   vertical: 1
-  controlID: 35
+  controlID: 121
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,10 +94,10 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 731
-  m_MinSize: {x: 785, y: 498}
-  m_MaxSize: {x: 16010, y: 14048}
+  m_MinSize: {x: 787, y: 348}
+  m_MaxSize: {x: 16012, y: 8048}
   vertical: 0
-  controlID: 36
+  controlID: 122
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,8 +143,8 @@ MonoBehaviour:
     y: 0
     width: 409
     height: 457
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -169,14 +169,14 @@ MonoBehaviour:
     y: 457
     width: 1250
     height: 274
-  m_MinSize: {x: 232, y: 274}
-  m_MaxSize: {x: 10002, y: 10024}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 16}
   - {fileID: 20}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,10 +265,10 @@ MonoBehaviour:
     y: 0
     width: 1250
     height: 731
-  m_MinSize: {x: 508, y: 498}
-  m_MaxSize: {x: 12008, y: 14048}
+  m_MinSize: {x: 510, y: 348}
+  m_MaxSize: {x: 12010, y: 8048}
   vertical: 1
-  controlID: 37
+  controlID: 123
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,10 +291,10 @@ MonoBehaviour:
     y: 0
     width: 1250
     height: 457
-  m_MinSize: {x: 508, y: 224}
-  m_MaxSize: {x: 12008, y: 4024}
+  m_MinSize: {x: 510, y: 224}
+  m_MaxSize: {x: 12010, y: 4024}
   vertical: 0
-  controlID: 38
+  controlID: 124
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -314,8 +314,8 @@ MonoBehaviour:
     y: 0
     width: 418
     height: 457
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 224}
+  m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -367,10 +367,10 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 1
-    m_VSlider: 1
+    m_HSlider: 0
+    m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -381,7 +381,7 @@ MonoBehaviour:
       y: 17
       width: 419
       height: 420
-    m_Scale: {x: 1.25, y: 1.25}
+    m_Scale: {x: 0.41015625, y: 0.41015625}
     m_Translation: {x: 209.5, y: 210}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -389,10 +389,10 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -167.6
-      y: -168
-      width: 335.2
-      height: 336
+      x: -510.78094
+      y: -512
+      width: 1021.5619
+      height: 1024
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
@@ -466,20 +466,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: 57
-  m_LastProjectPath: C:\Users\jturzinski\Unity Projects\Kaunaris_neu\Menu
+  m_LastProjectPath: C:\Users\jturzinski\Unity Projects\Kaunaris_neu\Kaunaris
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: de2c0000
-    m_LastClickedID: 11486
-    m_ExpandedIDs: 00000000d6280000562900001e2b00001a2c000000ca9a3b
+    m_SelectedIDs: d0280000
+    m_LastClickedID: 10448
+    m_ExpandedIDs: 00000000d0280000502900001a2b0000182c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -507,7 +507,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d6280000562900001e2b00001a2c0000
+    m_ExpandedIDs: 00000000d0280000502900001a2b0000182c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -532,8 +532,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: c82d0000
+    m_LastClickedInstanceID: 11720
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
@@ -626,9 +626,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 94d80000
-      m_LastClickedID: 55444
-      m_ExpandedIDs: 0236ffffcc38ffffe439ffff763cffff3241ffff3a42ffffb645ffff7a46ffff904dffffb44dffff0853ffff2853ffff885affff6a5bffff7860ffff8a60ffff4063ffff7265ffff8a65ffff2c7cffff3c7cffff527cffffca7effff3c81ffff8c89ffffa889ffff788cffff888cffff988cffffaa8cffff5c93ffff7893ffff4896ffff5896ffff6896ffff7a96ffff3a9affff569affff689affff789affff8a9affffa09affffc09affff9a9bffffb69bffff889effff989effffb29effffc29effff7a9fffff8ca5ffff20a7ffff4ca7ffff46a8ffffdcacffffe6acffff0cadffff16adffff6cafffff76afffffa6afffffe2b0ffffecb0ffff12b1ffff1cb1ffff7eb8ffff88b8ffff5ec6ffff68c6ffff06ccffffa0cdffffaacdffff06ceffff44ceffff4eceffffb8ceffff22d1ffff2ed1ffffb8e2ffffece3ffff08e4ffff16e4ffff22e4ffff30e4ffff42e4ffffa4e4ffff5ae5ffff76e5ffff84e5ffff90e5ffff9ee5ffffb0e5ffff54e6ffff70e6ffff7ee6ffff8ae6ffff98e6ffffaae6ffff56e7ffff72e7ffff46eaffff5aeaffff6eeaffff8ceaffffc2ebffff58eeffffbef0ffff34f1ffff88f5ffff3efaffff6efbffffcefbfffff4ffffff182f00006a2f0000b02f0000be2f0000f82f000002300000ea3000007232000094320000b4320000ca320000f4420000664300001e480000324f00005a4f000020500000385000004051000058510000b6600000d6600000466100004066000092660000c46a0000166b00005e75000094750000447a00005a870000d48f0000ec8f00000a900000a8ab000026c2000030c200007ccb00008ecf0000acd30000
+      m_SelectedIDs: c82d0000
+      m_LastClickedID: 11720
+      m_ExpandedIDs: befbfffff4ffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
