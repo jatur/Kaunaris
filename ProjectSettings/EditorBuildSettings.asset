@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Default.unity
+    guid: d6011636637143a468600a73c003141b
+  - enabled: 1
     path: Assets/Scenes/Menue.unity
     guid: fad4fe807f2b119409c3c54af835acd5
   - enabled: 1
@@ -17,10 +20,40 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: b8c80021ad32ed04b977176c180639b3
-  - enabled: 0
-    path: Assets/Examples/Demo/01_Basic/Tinder.unity
-    guid: e5ca50c5d3de14501b2d91e233fab821
   - enabled: 1
-    path: Assets/Scenes/ChurchText.unity
-    guid: 5e35bcd8bacef724ca0255efc8d11d70
+    path: Assets/Scenes/Castle.unity
+    guid: 7b65ff3bee25e4f43bad87d7867b678c
+  - enabled: 1
+    path: Assets/Scenes/Infos/TextCastle.unity
+    guid: 63942ff33e08ebc4e9ee7e68a4dbe964
+  - enabled: 1
+    path: Assets/Scenes/Church_of_Vytautas_the_Great.unity
+    guid: 7c450fe9889e11c4fb50523017b22293
+  - enabled: 1
+    path: Assets/Scenes/Infos/TextChurch.unity
+    guid: 2231c9fabc485e246b97c68bec20103b
+  - enabled: 1
+    path: Assets/Scenes/Maxima.unity
+    guid: 819ce612b6e3b384691c8cd393a6f2c7
+  - enabled: 1
+    path: Assets/Scenes/Infos/TextMaxima.unity
+    guid: edbc583fbcf31a54d80f973aa175594d
+  - enabled: 1
+    path: Assets/Scenes/stadiumAR.unity
+    guid: d5a363ba2f495b343b657c7e311c6231
+  - enabled: 1
+    path: Assets/Scenes/Infos/TextStadium.unity
+    guid: aad1b90228c5a67408f2f34ea2f986b3
+  - enabled: 1
+    path: Assets/Scenes/Volfas_Engelman_Bar.unity
+    guid: 8cbb0094a3f26924a83d5b16bf901069
+  - enabled: 1
+    path: Assets/Scenes/Infos/TextVolfas.unity
+    guid: 017c881c4c7b18e4f8660e22e8a267c0
+  - enabled: 1
+    path: Assets/Scenes/TownHall.unity
+    guid: 8ef051f2f1bbe1c449a30b150d6bbfdd
+  - enabled: 1
+    path: Assets/Scenes/Infos/TextTownHall.unity
+    guid: dfcb1bfe0a6ea854f919b2385bb0ed12
   m_configObjects: {}

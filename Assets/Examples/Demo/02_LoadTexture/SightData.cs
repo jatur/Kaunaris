@@ -61,7 +61,7 @@ namespace DefaultNamespace
             set => link = value;
         }
 
-        public SightData(string name, string info, string beastInfo, string image, string mapsUrl, int textureSceneId, string link)
+        public SightData(string name, string info, string beastInfo, string image, string mapsUrl, int textureSceneId, string link, bool isSight, bool isSport, bool isRestaurant, bool isBar, bool isSupermarket)
         {
             this.name = name;
             this.info = info;
@@ -70,6 +70,11 @@ namespace DefaultNamespace
             mapsURL = mapsUrl;
             textureSceneID = textureSceneId;
             this.link = link;
+            this.isSight = isSight;
+            this.isSport = isSport;
+            this.isRestaurant = isRestaurant;
+            this.isBar = isBar;
+            this.isSupermarket = isSupermarket;
         }
     }
 }

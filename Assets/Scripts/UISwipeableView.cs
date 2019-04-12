@@ -86,13 +86,21 @@ namespace SwipeableView
 
         private void UpdateDataListNope(UISwipeableCard<TData, TContext> card)
         {
+            Debug.Log("Before: " + data.Count);
             data.RemoveAt(0);
+            Debug.Log("After : " + data.Count);
+            fav.ForEach(f => Debug.Log(f.MapsUrl));
         }
 
         private void UpdateDataListLike(UISwipeableCard<TData, TContext> card)
         {
+            Debug.Log("Before: " + data.Count);
             fav.Add(data[0] as SightData);
+            Debug.Log("FavSize" + fav.Count);
+            Debug.Log("Data0" + ( (data[0] as SightData).MapsUrl));
             data.RemoveAt(0);
+            Debug.Log("After : " + data.Count);
+            fav.ForEach(f => Debug.Log(f.MapsUrl));
         }
 
 

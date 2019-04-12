@@ -15,7 +15,9 @@ public class OpenGoogleMaps : MonoBehaviour
         String url = "https://www.google.com/maps/dir";
 
         var texture =  GetComponent<UISwipeableView<SightData, SwipeableViewNullContext>>();
-        texture.Fav.ForEach(data => url+=data.mapsURL);
+        texture.Fav.ForEach(data => { url += data.mapsURL; Debug.Log(data.mapsURL); } );
+        Debug.Log(url);
+        Debug.Log("WHAT IS GOING ON HEEEERE");
         Application.OpenURL(url);
     }
 }

@@ -15,30 +15,30 @@ public class Menues : MonoBehaviour
 
     public void StartSwipe()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void BackToStart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void JumpToFilter()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     public void JumpToAR()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 
     public void JumpToMaps()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 
     public void JumpToInfoOfChirch()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(6);
     }
 
 }

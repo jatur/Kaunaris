@@ -38,7 +38,7 @@ namespace SwipeableView
         public List<SightData> GetHardcodedData()
         {
             List<SightData> data = new List<SightData>();
-            data.Add(new SightData("Building","Info","Beast Info",null,"mapsURL",0,"www.google.de"));
+          //  data.Add(new SightData("Building","Info","Beast Info",null,"mapsURL",0,"www.google.de"));
             return data;
         }
     }
