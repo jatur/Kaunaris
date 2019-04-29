@@ -76,5 +76,18 @@ namespace DefaultNamespace
             this.isBar = isBar;
             this.isSupermarket = isSupermarket;
         }
+        
+        public override bool Equals(object obj)
+        {
+            var item = obj as SightData;
+            
+            if (item == null)
+            {
+                return false;
+            }
+
+            return this.textureSceneID.Equals(item.textureSceneID);
+        }
     }
+    
 }

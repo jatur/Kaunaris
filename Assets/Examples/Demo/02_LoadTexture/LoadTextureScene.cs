@@ -15,9 +15,9 @@ namespace SwipeableView
         private UISwipeableViewLoadTexture swipeableView;
         
         private List<SightData> fav = new List<SightData>();
+        private List<SightData> nope = new List<SightData>();
         private List<SightData> data = new List<SightData>();
 
-        public bool aractive = false;
         
         public bool isSight;
         public bool isSport;
@@ -34,44 +34,83 @@ namespace SwipeableView
             isBar = component.IsBar;
             isSupermarket = component.IsSupermarket;
 
-            data = component.Data;
-            var savedData = component.Data;
+            data = component.GetHardcodedData();
 
             List<SightData> tmp = new List<SightData>();
 
-            if (component.IsSight)
+            if (isSight)
             {
-                data.Where(x => x.isSight == component.IsSight).ToList().ForEach(x => tmp.Add(x));
+                data.ForEach(x =>
+                {
+                    if (x.isSight==component.isSight&&!tmp.Contains(x))
+                    {
+                        tmp.Add(x);
+                    }
+                });
             }
-            if (component.IsBar)
+            if (isBar)
             {
-                data.Where(x => x.isBar == component.IsBar).ToList().ForEach(x => tmp.Add(x));
+                data.ForEach(x =>
+                {
+                    if (x.isBar==component.IsBar&&!tmp.Contains(x))
+                    {
+                        tmp.Add(x);
+                    }
+                });
             }
-            if (component.IsSport)
+            if (isSport)
             {
-                data.Where(x => x.isSport == component.IsSport).ToList().ForEach(x => tmp.Add(x));
+                data.ForEach(x =>
+                {
+                    if (x.isSport==component.IsSport&&!tmp.Contains(x))
+                    {
+                        tmp.Add(x);
+                    }
+                });
             }
-            if (component.IsRestaurant)
+            if (isRestaurant)
             {
-                data.Where(x => x.isRestaurant == component.IsRestaurant).ToList().ForEach(x => tmp.Add(x));
+                data.ForEach(x =>
+                {
+                    if (x.isRestaurant==component.IsRestaurant&&!tmp.Contains(x))
+                    {
+                        tmp.Add(x);
+                    }
+                });
             }
-            if (component.IsSupermarket)
+            if (isSupermarket)
             {
-                data.Where(x => x.isSupermarket == component.IsSupermarket).ToList().ForEach(x => tmp.Add(x));
+                data.ForEach(x =>
+                {
+                    if (x.isSupermarket==component.IsSupermarket&&!tmp.Contains(x))
+                    {
+                        tmp.Add(x);
+                    }
+                });
             }
 
+            fav = component.Fav;
+            Debug.Log("Fav" + fav.Count);
+            fav.ForEach(x =>
+            {
+                if (tmp.Contains(x))
+                {
+                    tmp.Remove(x);
+                    Debug.Log(x.name);
+                }
+            });
+            nope = component.Nope;
+            Debug.Log("Nope" + nope.Count);
+
+            nope.ForEach(x =>
+            {
+                if (tmp.Contains(x))
+                {
+                    tmp.Remove(x);
+                    Debug.Log(x.name);
+                }
+            });
             data = tmp;
-            Debug.Log("DATACOUNTER ___ : " + data.Count);
-            data.ForEach(x => Debug.Log(x.link));
-
-
-            Debug.Log("CDC: " + component.Data.Count);
-            Debug.Log("DC: " + data.Count);
-
-                fav = component.Fav;
-        
-
-        
             
             swipeableView.UpdateData(data);
         }
@@ -93,20 +132,14 @@ namespace SwipeableView
 
         public void onCLickAR()
         {
-            var component = GameObject.Find("DefaultSave").GetComponent<Save>();
-            component.Fav = swipeableView.getFav();
-            component.Data = swipeableView.getData();
+            save();
             SceneManager.LoadScene(swipeableView.getData()[0].textureSceneID);
-            aractive = true;
         }
 
         public void onCLickInfo()
         {
-            var component = GameObject.Find("DefaultSave").GetComponent<Save>();
-            component.Fav = swipeableView.getFav();
-            component.Data = swipeableView.getData();
+            save();
             SceneManager.LoadScene(Int32.Parse(swipeableView.getData()[0].info));
-            aractive = true;
         }
 
         public void save()
@@ -114,23 +147,12 @@ namespace SwipeableView
             var component = GameObject.Find("DefaultSave").GetComponent<Save>();
             component.Fav = swipeableView.getFav();
             component.Data = swipeableView.getData();
+            component.Nope = swipeableView.getNope();
         }
 
         public void OnClickNope()
         {
             swipeableView.AutoSwipeTo(Direction.Left);
-        }
-        
-        public List<SightData> GetHardcodedData()
-        {
-            List<SightData> data = new List<SightData>();
-            data.Add(new SightData("Maxima", "10", "", "Maxima", "/Maxima+XX,+Jonavos+gatv%C4%97,+Kaunas", 9, "http://volfasengelman.lt/", false, false, false, false, true));
-            data.Add(new SightData("Town Hall", "16", "", "TownHall", "/Kaunas+Town+Hall,+Rotu%C5%A1%C4%97s+a.+15,+Kaunas+44279", 15, "http://volfasengelman.lt/", true, false, false, false, false));
-            data.Add(new SightData("Kaunas Castle (Kauno pilis)", "6", "", "Castle", "/Kaunas+Castle,+Rotu%C5%A1%C4%97s+aik%C5%A1t%C4%97,+Kaunas", 5, "http://www.autc.lt/lt/architekturos-objektai/1130", true, false, false, false, false));
-            data.Add(new SightData("The Church of Vytautas the Great", "8", "", "Church", "/Vytauto+Did%C5%BEiojo+%C5%A0v%C4%8D.+Mergel%C4%97s+Marijos+%C4%97mimo+%C4%AF+dang%C5%B3+ba%C5%BEny%C4%8Dia,+Aleksoto+gatv%C4%97,+Kaunas", 7, "http://www.autc.lt/lt/architekturos-objektai/1130", true, false, false, false, false));
-            data.Add(new SightData("Volfas Engelman brewery", "14", "", "Brewery", "/Volfas+Engelman+Studija,+Kaunakiemio+gatv%C4%97,+Kaunas", 13, "http://volfasengelman.lt/", true, false, true, true, false));
-            data.Add(new SightData("Dariaus Ir Gireno Stadium", "12", "", "Stadium", "/S.+Darius+and+S.+Gir%C4%97no+stadium,+Kaunas", 11, "http://volfasengelman.lt/", true, true, false, true, false));
-            return data;
         }
 
     }

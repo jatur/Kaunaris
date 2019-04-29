@@ -51,6 +51,7 @@ public class Save : MonoBehaviour
     public List<SightData> fav;
 
     public List<SightData> data;
+    public List<SightData> nope;
     
     public bool isSight;
     public bool isSport;
@@ -68,7 +69,7 @@ public class Save : MonoBehaviour
     {
         fav = new List<SightData>();
         data = GetHardcodedData();
-        SceneManager.LoadScene(1);
+        nope = new List<SightData>();
         isSight = true;
         isSport = true;
         isRestaurant = true;
@@ -86,6 +87,12 @@ public class Save : MonoBehaviour
     {
         get => data;
         set => data = value;
+    }
+
+    public List<SightData> Nope
+    {
+        get => nope;
+        set => nope = value;
     }
 
     public List<SightData> GetHardcodedData()

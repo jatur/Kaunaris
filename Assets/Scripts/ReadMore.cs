@@ -45,6 +45,11 @@ public class ReadMore : MonoBehaviour
         Application.OpenURL(url);
     }
 
+    public void ReadMore2022()
+    {
+        Application.OpenURL("https://kaunas2022.eu/");
+    }
+
 
 
 }

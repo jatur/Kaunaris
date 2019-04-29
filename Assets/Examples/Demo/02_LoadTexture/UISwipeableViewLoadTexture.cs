@@ -21,5 +21,10 @@ namespace SwipeableView
         {
             return base.Data;
         }
+
+        public List<SightData> getNope()
+        {
+            return base.Nope;
+        }
     }
 }

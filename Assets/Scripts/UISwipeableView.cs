@@ -20,6 +20,12 @@ namespace SwipeableView
             set => data = value;
         }
 
+        public List<SightData> Nope
+        {
+            get => nope;
+            set => nope = value;
+        }
+
         [SerializeField] private GameObject cardPrefab;
 
         [SerializeField] private Transform cardRoot;
@@ -27,6 +33,7 @@ namespace SwipeableView
         [SerializeField] private UISwiper swiper;
 
         private List<SightData> fav = new List<SightData>();
+        private List<SightData> nope = new List<SightData>();
 
         private List<TData> data = new List<TData>();
         private TContext context;
@@ -39,7 +46,6 @@ namespace SwipeableView
         public void Initialize(List<TData> data)
         {
             this.data = data;
-            data.ForEach(dataElement => Debug.Log(dataElement));
 
             int createCount = data.Count > MAX_CREATE_COUNT ? MAX_CREATE_COUNT : data.Count;
 
@@ -86,21 +92,18 @@ namespace SwipeableView
 
         private void UpdateDataListNope(UISwipeableCard<TData, TContext> card)
         {
-            Debug.Log("Before: " + data.Count);
+            Nope.Add(data[0] as SightData);
             data.RemoveAt(0);
-            Debug.Log("After : " + data.Count);
-            fav.ForEach(f => Debug.Log(f.MapsUrl));
+            var component = GameObject.Find("DefaultSave").GetComponent<Save>();
+            component.Nope = Nope;
         }
 
         private void UpdateDataListLike(UISwipeableCard<TData, TContext> card)
         {
-            Debug.Log("Before: " + data.Count);
-            fav.Add(data[0] as SightData);
-            Debug.Log("FavSize" + fav.Count);
-            Debug.Log("Data0" + ( (data[0] as SightData).MapsUrl));
+            Fav.Add(data[0] as SightData);
             data.RemoveAt(0);
-            Debug.Log("After : " + data.Count);
-            fav.ForEach(f => Debug.Log(f.MapsUrl));
+            var component = GameObject.Find("DefaultSave").GetComponent<Save>();
+            component.Fav = Fav;
         }
 
 

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\jturzinski\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\jturzinski\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Kaunaris.1584715306.00" t="ExcludeRecursive" />
-    <e p="C:\Users\jturzinski\Unity Projects\Kaunaris_neu\Kaunaris" t="IncludeRecursive">
+    <e p="C:\Users\jturzinski\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Kaunaris.-268923198.00" t="ExcludeRecursive" />
+    <e p="C:\Users\jturzinski\Unity Projects\Kaunaris_final\Kaunaris" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -80,11 +80,13 @@
           </e>
         </e>
         <e p="Save.cs" t="Include" />
+        <e p="SaveSettings.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ISwipeable.cs" t="Include" />
           <e p="ListList.cs" t="Include" />
           <e p="Menues.cs" t="Include" />
           <e p="OpenGoogleMaps.cs" t="Include" />
+          <e p="ReadMore.cs" t="Include" />
           <e p="UISwipeableCard.cs" t="Include" />
           <e p="UISwipeableView.cs" t="Include" />
           <e p="UISwiper.cs" t="Include" />
