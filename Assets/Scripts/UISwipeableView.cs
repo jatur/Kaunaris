@@ -92,18 +92,29 @@ namespace SwipeableView
 
         private void UpdateDataListNope(UISwipeableCard<TData, TContext> card)
         {
+            Debug.Log("Swiped START");
+            var component = GameObject.Find("DefaultSave").GetComponent<Save>();
+            Nope = component.nope;
+            var tmp = data[0] as SightData;
+            Debug.Log(tmp.name);
             Nope.Add(data[0] as SightData);
             data.RemoveAt(0);
-            var component = GameObject.Find("DefaultSave").GetComponent<Save>();
             component.Nope = Nope;
+            Debug.Log("Swiped Nope");
         }
 
         private void UpdateDataListLike(UISwipeableCard<TData, TContext> card)
         {
+            Debug.Log("Swiped START");
+            var component = GameObject.Find("DefaultSave").GetComponent<Save>();
+            Fav = component.fav;
+            var tmp = data[0] as SightData;
+            Debug.Log(tmp.name);
             Fav.Add(data[0] as SightData);
             data.RemoveAt(0);
-            var component = GameObject.Find("DefaultSave").GetComponent<Save>();
             component.Fav = Fav;
+            Debug.Log("Swiped Fav");
+
         }
 
 

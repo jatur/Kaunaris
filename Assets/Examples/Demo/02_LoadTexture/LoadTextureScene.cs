@@ -24,9 +24,32 @@ namespace SwipeableView
         public bool isRestaurant;
         public bool isBar;
         public bool isSupermarket;
+        private GameObject[] _gameObjects;
+        private GameObject[] _gameObjects1;
+
+
+        private void Update()
+        {
+            if (data.Count == 0)
+            {
+                foreach (GameObject o in _gameObjects)
+                {
+                    o.SetActive(false);
+                }
+            }
+            else
+            {
+                foreach (GameObject o in _gameObjects1)
+                {
+                    o.SetActive(true);
+                }
+            }
+        }
 
         void Start()
         {
+            _gameObjects1 = GameObject.FindGameObjectsWithTag("TinderHide");
+            _gameObjects = GameObject.FindGameObjectsWithTag("TinderHide");
             var component = GameObject.Find("DefaultSave").GetComponent<Save>();
             isSight = component.IsSight;
             isSport = component.IsSport;
@@ -35,6 +58,27 @@ namespace SwipeableView
             isSupermarket = component.IsSupermarket;
 
             data = component.GetHardcodedData();
+            fav = component.Fav;
+            nope = component.Nope;
+            Debug.Log("Nope: " + nope.Count);
+            Debug.Log("Fav: " + fav.Count);
+            
+            
+            fav.ForEach(x =>
+            {
+                if (data.Contains(x))
+                {
+                    data.Remove(x);
+                }
+            });
+            nope.ForEach(x =>
+            {
+                if (data.Contains(x))
+                {
+                    data.Remove(x);
+                }
+
+            });
 
             List<SightData> tmp = new List<SightData>();
 
@@ -89,28 +133,10 @@ namespace SwipeableView
                 });
             }
 
-            fav = component.Fav;
-            Debug.Log("Fav" + fav.Count);
-            fav.ForEach(x =>
-            {
-                if (tmp.Contains(x))
-                {
-                    tmp.Remove(x);
-                    Debug.Log(x.name);
-                }
-            });
-            nope = component.Nope;
-            Debug.Log("Nope" + nope.Count);
-
-            nope.ForEach(x =>
-            {
-                if (tmp.Contains(x))
-                {
-                    tmp.Remove(x);
-                    Debug.Log(x.name);
-                }
-            });
             data = tmp;
+
+            Debug.Log("Data:" + data.Count);
+            data.ForEach(x => Debug.Log(x.name));
             
             swipeableView.UpdateData(data);
         }
@@ -128,6 +154,8 @@ namespace SwipeableView
             Debug.Log(url);
             Debug.Log("WHAT IS GOING ON HEEEERE");
             Application.OpenURL(url);
+            SceneManager.LoadScene(1);
+            loadDefault();
         }
 
         public void onCLickAR()
@@ -148,6 +176,19 @@ namespace SwipeableView
             component.Fav = swipeableView.getFav();
             component.Data = swipeableView.getData();
             component.Nope = swipeableView.getNope();
+            Debug.Log("SAVE START");
+            Debug.Log("Data: " + component.data.Count);
+            Debug.Log("Fav: " + component.fav.Count);
+            Debug.Log("Nope: " + component.nope.Count);
+            Debug.Log("SAVE END");
+        }
+        
+        public void loadDefault()
+        {
+            var component = GameObject.Find("DefaultSave").GetComponent<Save>();
+            component.Fav = new List<SightData>();
+            component.Data = component.GetHardcodedData();
+            component.Nope = new List<SightData>();
         }
 
         public void OnClickNope()
