@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 21468641}
   m_Layer: 5
   m_Name: SwipeableView
-  m_TagString: Untagged
+  m_TagString: TinderHide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

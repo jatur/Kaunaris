@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Object = UnityEngine.Object;
 
 namespace SwipeableView
 {
@@ -48,6 +51,7 @@ namespace SwipeableView
             this.data = data;
 
             int createCount = data.Count > MAX_CREATE_COUNT ? MAX_CREATE_COUNT : data.Count;
+            
 
             for (int i = 0; i < createCount; ++i)
             {
@@ -92,28 +96,30 @@ namespace SwipeableView
 
         private void UpdateDataListNope(UISwipeableCard<TData, TContext> card)
         {
-            Debug.Log("Swiped START");
             var component = GameObject.Find("DefaultSave").GetComponent<Save>();
             Nope = component.nope;
             var tmp = data[0] as SightData;
-            Debug.Log(tmp.name);
             Nope.Add(data[0] as SightData);
             data.RemoveAt(0);
-            component.Nope = Nope;
-            Debug.Log("Swiped Nope");
+            component.AddNope(tmp);
+
+            
+
         }
 
         private void UpdateDataListLike(UISwipeableCard<TData, TContext> card)
         {
-            Debug.Log("Swiped START");
             var component = GameObject.Find("DefaultSave").GetComponent<Save>();
             Fav = component.fav;
             var tmp = data[0] as SightData;
-            Debug.Log(tmp.name);
             Fav.Add(data[0] as SightData);
             data.RemoveAt(0);
-            component.Fav = Fav;
-            Debug.Log("Swiped Fav");
+            component.AddFav(tmp);
+            if (component.GetData().Count>0)
+            {
+                SceneManager.LoadScene(2);
+            }
+
 
         }
 
@@ -130,6 +136,7 @@ namespace SwipeableView
             swiper.SetCard(swipeTarget);
             // When there are three or more data,
             // Replace card index with the seconde index from here.
+            Debug.Log("cardcount: " + cards.Count);
             int index = cards.Count < 2 ? card.DataIndex : card.DataIndex + 2;
             UpdateCard(card, index);
         }
@@ -137,6 +144,8 @@ namespace SwipeableView
         private void UpdateCard(UISwipeableCard<TData, TContext> card, int dataIndex)
         {
             // if data doesn't exist hide card
+            Debug.Log("dataindex: " + dataIndex);
+            Debug.Log("datacount: " + data.Count);
             if (dataIndex < 0 || dataIndex > data.Count - 1)
             {
                 card.SetVisible(false);

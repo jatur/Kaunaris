@@ -14,10 +14,7 @@ namespace SwipeableView
 
         public override void UpdateContent(SightData data)
         {
-            if (data.image==null)
-            {
-                Debug.Log(data.ToString());
-            }
+            Debug.Log("UpdateContent:" + data.name);
 
             image.texture = Resources.Load<Texture2D>(data.image);
             imgLike.alpha = 0;
