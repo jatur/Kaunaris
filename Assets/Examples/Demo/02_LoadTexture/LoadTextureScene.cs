@@ -148,8 +148,6 @@ namespace SwipeableView
         public void save()
         {
             var component = GameObject.Find("DefaultSave").GetComponent<Save>();
-            component.Fav = swipeableView.getFav();
-            component.Nope = swipeableView.getNope();
             component.checkData();
         }
         

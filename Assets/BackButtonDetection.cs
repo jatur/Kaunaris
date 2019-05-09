@@ -16,8 +16,6 @@ public class BackButtonDetection : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Escape))
         {
-            // SceneManager.LoadScene(1);
-            Debug.Log("Test");
             SceneManager.LoadScene(2);
         }
     }
