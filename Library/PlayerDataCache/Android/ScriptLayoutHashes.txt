@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/jturzinski/Unity Projects/Kaunaris_final/test_3.apk
+C:/Users/jturzinski/Unity Projects/Kaunaris_final/test_4.apk
 SceneListBegin?
 Assets/Default.unity
 Assets/Scenes/Menue.unity
@@ -77,8 +77,6 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 802a424ac08903d2ef6354eb36552e49 Assembly-CSharp.dll:Lean.Touch.LeanFingerSet
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Lean.Touch.LeanTouchEvents
 98ad81e9f689a492509f07e75b810aaa Unity.TextMeshPro.dll:TMPro.TMP_InputField
-71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
-71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 d8aec9f4601175909e6390a20fb36799 Assembly-CSharp.dll:SwipeableView.UISwipeableCardBasic
 3360e813f97475fc774bb7069473a853 Assembly-CSharp.dll:Lean.Touch.LeanSelect
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter

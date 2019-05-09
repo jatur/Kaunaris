@@ -131,9 +131,7 @@ public class Save : MonoBehaviour
     public List<SightData> GetHardcodedData()
     {
         List<SightData> data = new List<SightData>();
-        data.Add(new SightData("Volfas Engelman brewery", "14", "", "Brewery",
-            "/Volfas+Engelman+Studija,+Kaunakiemio+gatv%C4%97,+Kaunas", 13, "http://volfasengelman.lt/", true, false,
-            true, true, false));
+        
         data.Add(new SightData("Maxima", "10", "", "Maxima", "/Maxima+XX,+Jonavos+gatv%C4%97,+Kaunas", 9,
             "http://volfasengelman.lt/", false, false, false, false, true));
         data.Add(new SightData("Town Hall", "16", "", "TownHall",
@@ -145,9 +143,11 @@ public class Save : MonoBehaviour
         data.Add(new SightData("The Church of Vytautas the Great", "8", "", "Church",
             "/Vytauto+Did%C5%BEiojo+%C5%A0v%C4%8D.+Mergel%C4%97s+Marijos+%C4%97mimo+%C4%AF+dang%C5%B3+ba%C5%BEny%C4%8Dia,+Aleksoto+gatv%C4%97,+Kaunas",
             7, "http://www.autc.lt/lt/architekturos-objektai/1130", true, false, false, false, false));
-
+        data.Add(new SightData("Volfas Engelman brewery", "14", "", "Brewery",
+            "/Volfas+Engelman+Studija,+Kaunakiemio+gatv%C4%97,+Kaunas", 13, "http://volfasengelman.lt/", true, false,
+            true, true, false));
         data.Add(new SightData("Dariaus Ir Gireno Stadium", "12", "", "Stadium",
-            "/S.+Darius+and+S.+Gir%C4%97no+stadium,+Kaunas", 11, "http://volfasengelman.lt/", true, true, false, true,
+            "/S.+Darius+and+S.+Gir%C4%97no+stadium,+Kaunas", 11, "http://volfasengelman.lt/", true, true, false, false,
             false));
         
         return data;

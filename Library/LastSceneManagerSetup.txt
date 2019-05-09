@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Default.unity
+- path: Assets/Examples/Demo/02_LoadTexture/LoadTextureScene.unity
   isLoaded: 1
   isActive: 1
